@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c532a0e2eb9673d44b79d4eb21aab3ff, type: 3}
+  m_Name: Apple
+  m_EditorClassIdentifier: 
+  fruitName: Apple
+  frames:
+  - {fileID: -653413078, guid: 9b7879162c023c24583738929cc37b03, type: 3}
+  - {fileID: 1369191064, guid: 9b7879162c023c24583738929cc37b03, type: 3}
+  - {fileID: 961906138, guid: 9b7879162c023c24583738929cc37b03, type: 3}
+  - {fileID: -133816353, guid: 9b7879162c023c24583738929cc37b03, type: 3}
+  - {fileID: 2026905800, guid: 9b7879162c023c24583738929cc37b03, type: 3}
+  - {fileID: 1856154291, guid: 9b7879162c023c24583738929cc37b03, type: 3}
+  - {fileID: -193119436, guid: 9b7879162c023c24583738929cc37b03, type: 3}
+  - {fileID: -866372973, guid: 9b7879162c023c24583738929cc37b03, type: 3}
+  - {fileID: -1943055560, guid: 9b7879162c023c24583738929cc37b03, type: 3}
+  - {fileID: -980104847, guid: 9b7879162c023c24583738929cc37b03, type: 3}
+  - {fileID: 1014882628, guid: 9b7879162c023c24583738929cc37b03, type: 3}
+  - {fileID: 843772875, guid: 9b7879162c023c24583738929cc37b03, type: 3}
+  - {fileID: 1870056516, guid: 9b7879162c023c24583738929cc37b03, type: 3}
+  - {fileID: 1034185076, guid: 9b7879162c023c24583738929cc37b03, type: 3}
+  - {fileID: 1975703139, guid: 9b7879162c023c24583738929cc37b03, type: 3}
+  - {fileID: -516291182, guid: 9b7879162c023c24583738929cc37b03, type: 3}
+  - {fileID: 1822659736, guid: 9b7879162c023c24583738929cc37b03, type: 3}
+  frameRate: 17

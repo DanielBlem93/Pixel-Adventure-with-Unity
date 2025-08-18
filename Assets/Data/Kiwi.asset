@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c532a0e2eb9673d44b79d4eb21aab3ff, type: 3}
+  m_Name: Kiwi
+  m_EditorClassIdentifier: 
+  fruitName: Kiwi
+  frames:
+  - {fileID: 410333739, guid: 22ba5771461aafa43b5e6015ce4372b9, type: 3}
+  - {fileID: 1790771620, guid: 22ba5771461aafa43b5e6015ce4372b9, type: 3}
+  - {fileID: 1181922883, guid: 22ba5771461aafa43b5e6015ce4372b9, type: 3}
+  - {fileID: 608023430, guid: 22ba5771461aafa43b5e6015ce4372b9, type: 3}
+  - {fileID: 727901328, guid: 22ba5771461aafa43b5e6015ce4372b9, type: 3}
+  - {fileID: 609910402, guid: 22ba5771461aafa43b5e6015ce4372b9, type: 3}
+  - {fileID: -1677160647, guid: 22ba5771461aafa43b5e6015ce4372b9, type: 3}
+  - {fileID: -923382937, guid: 22ba5771461aafa43b5e6015ce4372b9, type: 3}
+  - {fileID: 1677061339, guid: 22ba5771461aafa43b5e6015ce4372b9, type: 3}
+  - {fileID: 511965899, guid: 22ba5771461aafa43b5e6015ce4372b9, type: 3}
+  - {fileID: 834163119, guid: 22ba5771461aafa43b5e6015ce4372b9, type: 3}
+  - {fileID: -6785224, guid: 22ba5771461aafa43b5e6015ce4372b9, type: 3}
+  - {fileID: 712382656, guid: 22ba5771461aafa43b5e6015ce4372b9, type: 3}
+  - {fileID: 1747843722, guid: 22ba5771461aafa43b5e6015ce4372b9, type: 3}
+  - {fileID: 1957661647, guid: 22ba5771461aafa43b5e6015ce4372b9, type: 3}
+  - {fileID: 585149549, guid: 22ba5771461aafa43b5e6015ce4372b9, type: 3}
+  - {fileID: -553319220, guid: 22ba5771461aafa43b5e6015ce4372b9, type: 3}
+  frameRate: 17

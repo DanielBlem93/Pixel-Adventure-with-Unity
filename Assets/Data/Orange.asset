@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c532a0e2eb9673d44b79d4eb21aab3ff, type: 3}
+  m_Name: Orange
+  m_EditorClassIdentifier: 
+  fruitName: Orange
+  frames:
+  - {fileID: 472113863, guid: 551f388023cbfe044baf5ddfa718e14f, type: 3}
+  - {fileID: -805812555, guid: 551f388023cbfe044baf5ddfa718e14f, type: 3}
+  - {fileID: -633676573, guid: 551f388023cbfe044baf5ddfa718e14f, type: 3}
+  - {fileID: -957522646, guid: 551f388023cbfe044baf5ddfa718e14f, type: 3}
+  - {fileID: -26520208, guid: 551f388023cbfe044baf5ddfa718e14f, type: 3}
+  - {fileID: -361827904, guid: 551f388023cbfe044baf5ddfa718e14f, type: 3}
+  - {fileID: 919610656, guid: 551f388023cbfe044baf5ddfa718e14f, type: 3}
+  - {fileID: 292094970, guid: 551f388023cbfe044baf5ddfa718e14f, type: 3}
+  - {fileID: -1656436641, guid: 551f388023cbfe044baf5ddfa718e14f, type: 3}
+  - {fileID: -857732763, guid: 551f388023cbfe044baf5ddfa718e14f, type: 3}
+  - {fileID: -852272340, guid: 551f388023cbfe044baf5ddfa718e14f, type: 3}
+  - {fileID: 2136881998, guid: 551f388023cbfe044baf5ddfa718e14f, type: 3}
+  - {fileID: 655272100, guid: 551f388023cbfe044baf5ddfa718e14f, type: 3}
+  - {fileID: -342941427, guid: 551f388023cbfe044baf5ddfa718e14f, type: 3}
+  - {fileID: 1781854650, guid: 551f388023cbfe044baf5ddfa718e14f, type: 3}
+  - {fileID: 1583812076, guid: 551f388023cbfe044baf5ddfa718e14f, type: 3}
+  - {fileID: -868138209, guid: 551f388023cbfe044baf5ddfa718e14f, type: 3}
+  frameRate: 17
