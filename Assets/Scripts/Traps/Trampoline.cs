@@ -32,6 +32,7 @@ public class Trampoline : MonoBehaviour
         audioSource.Play();
         player.maxRiseSpeed = jumpPower;
         player.rb.velocity = new Vector2(player.rb.velocity.x, jumpPower);
+        player.jumpCount = 1;
         particles.SpawnJumpDust();
         yield return new WaitForSeconds(0.1f);
         player.maxRiseSpeed = 15f;
