@@ -1,61 +1,99 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class RockHead : TrapBase
 {
+<<<<<<< Updated upstream
     [Header("Movement")]
     public float initialSpeed = 5f;
     public float waitTimer = 2f;
     [Tooltip("1 for right, -1 for left")]
     public float direction = -1f; // 1 for right, -1 for left
+=======
+    bool isMoving = false;
+    bool isBlinking = false;
+    bool isWaiting = false;
+    public float blinkRate = 2f;
+>>>>>>> Stashed changes
 
-    private float speed;
-    private bool isWaiting = false;
-    private bool isMoving;
-    private bool isBlinking;
-    public float blinkRate;
+    Animator animator;
 
-    private Rigidbody2D rb;
-    private Animator animator;
+    [Header("Rider-Handling (Parent)")]
+    public string riderTag = "Player";
+    [Tooltip("Kontakt-Normale muss so stark nach oben zeigen, damit 'oben drauf' gilt.")]
+    public float topNormalThreshold = 0.2f;  // 0.1–0.2
+    [Tooltip("Fallback: Toleranz unterhalb Oberkante der Plattform (Weltmaß).")]
+    public float topHeightTolerance = 0.03f;
+    public Transform riderAnchor;
 
+<<<<<<< Updated upstream
     void Awake()
     {
         blinkRate = Random.Range(2f, 5f);
+=======
+
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+        // platformAudio = GetComponent<AudioSource>();
+
+>>>>>>> Stashed changes
     }
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        speed = initialSpeed;
-
-        // Sicherheit: keine Gravitation und Rotation
-        rb.gravityScale = 0f;
-        rb.freezeRotation = true;
+        StartCoroutine(BlinkLoop());
     }
     void Update()
     {
+<<<<<<< Updated upstream
         StartCoroutine(Blink());
     }
 
     void FixedUpdate()
     {
         HandleMovement();
+=======
+
+>>>>>>> Stashed changes
     }
 
-    void HandleMovement()
+    void OnCollisionEnter2D(Collision2D c) { TryParent(c); }
+    void OnCollisionStay2D(Collision2D c) { TryParent(c); }
+    void OnCollisionExit2D(Collision2D c)
     {
-        if (!isWaiting)
-        {
-            rb.velocity = new Vector2(direction * speed, 0f);
-            isMoving = true;
-        }
-        else
-        {
-            rb.velocity = Vector2.zero;
-            isMoving = false;
-        }
+        if (!c.gameObject.CompareTag(riderTag)) return;
+        if (c.transform.parent == riderAnchor.transform) c.transform.SetParent(null, true);
     }
 
+    void TryParent(Collision2D c)
+    {
+        if (!c.gameObject.CompareTag(riderTag)) return;
+        if (!IsStandingOnTop(c)) return;
+
+        if (c.transform.parent != riderAnchor.transform)
+            c.transform.SetParent(riderAnchor.transform, /*worldPositionStays*/ true);
+    }
+
+
+    bool IsStandingOnTop(Collision2D col)
+    {
+        // 1) Kontakt-Normalen prüfen
+        foreach (var ct in col.contacts)
+            if (ct.normal.y > topNormalThreshold) return true;
+
+        // 2) Fallback über Bounds (Unterkante Rider >= Oberkante Plattform - Tol.)
+        var myCol = GetComponent<Collider2D>();
+        if (myCol)
+        {
+            float platformTop = myCol.bounds.max.y - topHeightTolerance;
+            if (col.collider.bounds.min.y >= platformTop) return true;
+        }
+        return false;
+    }
+
+<<<<<<< Updated upstream
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Prüfen ob es eine Wand ist (Layer, Tag oder Normale der Kollision)
@@ -71,9 +109,38 @@ public class RockHead : TrapBase
                     StartCoroutine(ChangeDirection());
                     break;
                 }
+=======
+    // void PlayPlatfromSound()
+    // {
+    //     if (platformAudio == null) platformAudio = gameObject.AddComponent<AudioSource>();
+    //     platformAudio.PlayOneShot(platformClip);
+    // }
+
+    // void StopPlatformSound()
+    // {
+    //     if (platformAudio.isPlaying)
+    //     {
+    //         platformAudio.Stop();
+    //     }
+    // }
+
+
+    IEnumerator BlinkLoop()
+    {
+        while (true)
+        {
+            if (animator && isMoving && !isWaiting && !isBlinking)
+            {
+                isBlinking = true;
+                yield return new WaitForSeconds(blinkRate);
+                animator.SetTrigger("Blink");
+                isBlinking = false;
+>>>>>>> Stashed changes
             }
+            else yield return null;
         }
     }
+<<<<<<< Updated upstream
 
     private IEnumerator ChangeDirection()
     {
@@ -99,4 +166,6 @@ public class RockHead : TrapBase
         }
         yield return null;
     }
+=======
+>>>>>>> Stashed changes
 }
