@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Platform
   - Start
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Platform
   - HangableObjects
   - BehindPlayer
-  - 
+  - Enemys
   - 
   - 
   - 
