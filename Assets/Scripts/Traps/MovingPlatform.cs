@@ -45,7 +45,7 @@ public class MovingPlatform : MonoBehaviour
     void Update()
     {
         MovePlatform();
-        ChangeDirectrion();
+        ChangeDirection();
     }
 
 
@@ -59,7 +59,7 @@ public class MovingPlatform : MonoBehaviour
         }
         transform.position = Vector3.MoveTowards(transform.position, nextPosition, speed * Time.deltaTime);
     }
-    void ChangeDirectrion()
+    void ChangeDirection()
     {
         if (transform.position == nextPosition)
         {
@@ -129,4 +129,4 @@ public class MovingPlatform : MonoBehaviour
             platformAudio.Stop();
         }
     }
-}
+ }
