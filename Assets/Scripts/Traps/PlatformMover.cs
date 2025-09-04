@@ -8,7 +8,7 @@ public class Destination
 {
     public Transform point;
     [Tooltip("Sekunden, die die Plattform am Ziel wartet.")]
-    public float waitTime = 0f;
+    public float waitTime = 2f;
     [Tooltip("Event, das ausgelöst wird, wenn die Plattform dieses Ziel erreicht.")]
     public UnityEvent onArrive;
 
